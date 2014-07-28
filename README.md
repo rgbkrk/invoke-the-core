@@ -1,7 +1,7 @@
 Invoke the Core
 ===============
 
-![](http://i.imgur.com/6V8XFRp.png)
+![](http://i.imgur.com/6V8XFRp.png?1)
 
 Provision a CoreOS cluster with an invoke script. Lets you use Rackspace's OnMetal or performance machines.
 
