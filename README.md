@@ -1,5 +1,7 @@
-invoke-the-core
+Invoke the Core
 ===============
+
+![](http://i.imgur.com/6V8XFRp.png)
 
 Provision a CoreOS cluster with an invoke script. Lets you use Rackspace's OnMetal or performance machines.
 
@@ -9,6 +11,8 @@ Steal freely from this for your own OpenStack setup.
 
 * invoke
 * rackspace-novaclient
+
+Just `pip install invoke rackspace-novaclient` in your favorite way.
 
 ## Usage
 
