@@ -16,6 +16,13 @@ Just `pip install invoke rackspace-novaclient` in your favorite way.
 
 ## Usage
 
+First up, clone this repository:
+
+```
+git clone https://github.com/rgbkrk/invoke-the-core.git
+cd invoke-the-core
+```
+
 Assuming you have the typical OpenStack environment variables set up (and are
 using Rackspace flavors):
 
