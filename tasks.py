@@ -22,15 +22,17 @@ token_get_url = "https://discovery.etcd.io/new"
 # tools
 #
 ################################################################################
-COREOS_ALPHA  = "c3a4208a-3284-4e46-a99d-c29b56b457ba"
-COREOS_BETA   = "746ba067-035c-4dbb-91f6-39300a7f8a03"
-COREOS_STABLE = "4ca73331-5063-429f-8a27-70de5099e747"
+COREOS_ALPHA  = "c6ba33e5-d48e-4c2d-95c1-2badcdc07231"
+COREOS_BETA   = "b63e1435-a46f-4726-b984-e3f15ae92753"
+COREOS_STABLE = "7fd88211-ce43-41bf-9a85-e73df4066581"
 
-# The one and only image for CoreOS when OnMetal (on-demand raw metal)
-COREOS_ONMETAL_DEVELOPER = "be25b5fd-4ed5-4297-a37a-b886b3546821"
+COREOS_ALPHA_ONMETAL = 
+
+COREOS_ALPHA_ONMETAL = "f616abe4-773b-4c15-92a8-7e036ea906df"
+COREOS_BETA_ONMETAL = "d3d03b8b-a955-4031-ae3b-f912828a4257"
+COREOS_STABLE_ONMETAL = "dd7bc23b-10a9-463b-8d5a-089ecb9aa868"
 
 default_image = COREOS_STABLE
-
 
 ################################################################################
 # FLAVORS!
@@ -85,14 +87,6 @@ coreos:
       command: start
   update:
     group: stable
-write_files:
-    # Personally, I prefer only using keys. Bye bye passwords.
-    - path: /etc/ssh/sshd_config
-      permissions: 0644
-      content: |
-        UsePrivilegeSeparation sandbox
-        Subsystem sftp internal-sftp
-        PasswordAuthentication no
 '''
 
 @task
@@ -142,5 +136,4 @@ def node(nodename="corenode",
                                      key_name=key_name)
 
     run(nova_line)
-
 
